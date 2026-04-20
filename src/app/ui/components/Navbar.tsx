@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="actions">
-                <button className="loginBtn">Sign In</button>
+                <button onClick={() => navigate('/sign-in')} className="loginBtn">Sign In</button>
                 <button
                     className="ctaBtn"
                     onClick={() => navigate('/create-poll')}
