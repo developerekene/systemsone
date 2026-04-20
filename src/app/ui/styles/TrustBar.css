@@ -1,0 +1,76 @@
+.trustContainer {
+    width: 100%;
+    padding: 5rem 0;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 51, 102, 0.05);
+}
+
+.trustLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4b5563; /* Subtle gray */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 3.5rem;
+}
+
+.trustWrapper {
+    display: flex;
+    width: 100%;
+    position: relative;
+    /* This creates the fade-out effect on the sides */
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 20%,
+        black 80%,
+        transparent
+    );
+}
+
+.trustTrack {
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+    animation: scroll 40s linear infinite; /* Slightly slower for a more 'official' feel */
+    white-space: nowrap;
+}
+
+.partnerName {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: rgba(0, 51, 102, 0.2); /* Muted Dark Blue */
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.partnerName:hover {
+    color: #003366; /* Deep Dark Blue on hover */
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .trustContainer {
+        padding: 3rem 0;
+    }
+    .trustTrack {
+        gap: 4rem;
+    }
+    .partnerName {
+        font-size: 1rem;
+    }
+}

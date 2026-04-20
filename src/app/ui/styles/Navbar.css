@@ -1,0 +1,171 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 51, 102, 0.1);
+    z-index: 2000;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -0.06em;
+    color: #003366;
+    text-decoration: none;
+    z-index: 3000; /* Keep logo above mobile menu */
+}
+
+.logoAccent { color: #FF69B4; }
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex: 1;
+    justify-content: space-between;
+    margin-left: 3rem;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.link {
+    color: #003366;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.link:hover { color: #FF69B4; }
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.loginBtn {
+    background: none;
+    border: none;
+    color: #003366;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.ctaBtn {
+    background-color: #FF8C00;
+    color: white;
+    padding: 0.7rem 1.6rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 0px #cc7000;
+    white-space: nowrap;
+}
+
+/* --- MOBILE STYLES --- */
+
+.menuToggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3000;
+    padding: 10px;
+}
+
+.hamburger {
+    width: 24px;
+    height: 2px;
+    background: #003366;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #003366;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before { transform: translateY(-8px); }
+.hamburger::after { transform: translateY(8px); }
+
+/* Hamburger Open State (X) */
+.hamburger.open { background: transparent; }
+.hamburger.open::before { transform: rotate(45deg); }
+.hamburger.open::after { transform: rotate(-45deg); }
+
+@media (max-width: 1024px) {
+    .navbar { padding: 1rem 2rem; }
+    
+    .menuToggle {
+        display: block;
+    }
+
+    .navContainer {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden by default */
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        margin: 0;
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+    }
+
+    .navContainer.menuActive {
+        right: 0; /* Slide in */
+    }
+
+    .navLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link {
+        font-size: 1.25rem; /* Larger links for touch */
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .ctaBtn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar { padding: 1rem; }
+    .navContainer { width: 100%; } /* Full screen on phones */
+}

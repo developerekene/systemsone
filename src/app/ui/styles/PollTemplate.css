@@ -1,0 +1,185 @@
+.templateContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 8rem 2rem;
+  }
+  
+  .templateHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .templateHeader h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #003366; /* Dark Blue */
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+  }
+  
+  .templateHeader p {
+    color: #64748b;
+    font-size: 1.2rem;
+  }
+  
+  /* Search & Filters */
+  .templateControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+  
+  .searchWrapper {
+    flex: 1;
+    max-width: 450px;
+  }
+  
+  .searchWrapper input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 51, 102, 0.1);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .searchWrapper input:focus {
+    border-color: #FF8C00; /* Orange focus */
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.1);
+  }
+  
+  .filterList {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .filterBtn {
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: white;
+    color: #003366;
+    border: 1px solid rgba(0, 51, 102, 0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filterBtn.active {
+    background: #003366;
+    color: white;
+    border-color: #003366;
+  }
+  
+  /* Grid & Cards */
+  .templateGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .templateCard {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 51, 102, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .templateCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.08);
+  }
+  
+  .imageWrapper {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+  
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .templateCard:hover .imageWrapper img {
+    transform: scale(1.05);
+  }
+  
+  /* Hover Overlay */
+  .cardOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 51, 102, 0.7); /* Dark Blue Overlay */
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .templateCard:hover .cardOverlay {
+    opacity: 1;
+  }
+  
+  .useTemplateBtn, .previewTemplateBtn {
+    width: 200px;
+    padding: 0.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .useTemplateBtn {
+    background: #FF8C00; /* Orange */
+    color: white;
+  }
+  
+  .previewTemplateBtn {
+    background: white;
+    color: #003366;
+  }
+  
+  /* Footer info */
+  .cardFooter {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .cardFooter h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 0.5rem;
+  }
+  
+  .typeTag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #FF69B4; /* Pink Tag */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .useCount {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+  
+  @media (max-width: 900px) {
+    .templateControls { flex-direction: column; align-items: stretch; }
+    .templateHeader h2 { font-size: 2.5rem; }
+    .filterList { overflow-x: auto; white-space: nowrap; padding-bottom: 1rem; }
+  }

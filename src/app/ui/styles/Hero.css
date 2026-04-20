@@ -1,0 +1,123 @@
+.heroSection {
+    padding: 12rem 1rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.badge {
+    background-color: rgba(0, 51, 102, 0.05);
+    color: #003366;
+    /* Dark Blue */
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid rgba(0, 51, 102, 0.1);
+}
+
+.sparkle {
+    color: #FF8C00;
+}
+
+.heroTitle {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    color: #003366;
+    /* Dark Blue */
+    margin-bottom: 2rem;
+}
+
+.highlightPink {
+    color: #FF69B4;
+    /* Pink */
+}
+
+.highlightOrange {
+    color: #FF8C00;
+    /* Orange */
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: #4b5563;
+    /* Subtle dark gray for readability */
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.heroButtonGroup {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.heroPrimaryBtn {
+    background-color: #FF8C00;
+    /* Orange */
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 0px #cc7000;
+}
+
+.heroPrimaryBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 140, 0, 0.3);
+    background-color: #ff991a;
+}
+
+.heroPrimaryBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 0px #cc7000;
+}
+
+.heroSecondaryBtn {
+    background-color: transparent;
+    color: #003366;
+    border: 2px solid #003366;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.heroSecondaryBtn:hover {
+    background-color: #003366;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding-top: 10rem;
+    }
+
+    .heroTitle {
+        font-size: 3.2rem;
+    }
+
+    .heroButtonGroup {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+    }
+}
