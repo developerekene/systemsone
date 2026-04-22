@@ -18,6 +18,9 @@ const SignIn: React.FC = () => {
     return (
         <div className="authContainer">
             <div className="authCard">
+                <p className="footerText">
+                    Back to <Link to="/">Home</Link>
+                </p>
                 <div className="authHeader">
                     <h2 className="authTitle">Welcome back</h2>
                     <p className="authSubtitle">Sign in to cast your vote and track results.</p>
@@ -25,9 +28,9 @@ const SignIn: React.FC = () => {
 
                 {/* Google Sign Up Button */}
                 <button className="googleBtn" onClick={handleGoogleSignIn}>
-                    <img 
-                        src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/layout/google.svg" 
-                        alt="Google" 
+                    <img
+                        src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/layout/google.svg"
+                        alt="Google"
                     />
                     Continue with Google
                 </button>
@@ -39,13 +42,13 @@ const SignIn: React.FC = () => {
                 <form className="authForm" onSubmit={handleEmailSignIn}>
                     <div className="inputGroup">
                         <label htmlFor="email">Email Address</label>
-                        <input 
-                            type="email" 
-                            id="email" 
-                            placeholder="name@example.com" 
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="name@example.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            required 
+                            required
                         />
                     </div>
 
@@ -54,13 +57,13 @@ const SignIn: React.FC = () => {
                             <label htmlFor="password">Password</label>
                             <a href="#" className="forgotLink">Forgot?</a>
                         </div>
-                        <input 
-                            type="password" 
-                            id="password" 
-                            placeholder="••••••••" 
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="••••••••"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            required 
+                            required
                         />
                     </div>
 
@@ -68,7 +71,7 @@ const SignIn: React.FC = () => {
                 </form>
 
                 <p className="footerText">
-                    Don't have an account? <Link to="/signup">Create an account</Link>
+                    Don't have an account? <Link to="/sign-up">Create an account</Link>
                 </p>
             </div>
         </div>

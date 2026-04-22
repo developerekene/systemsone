@@ -1,0 +1,50 @@
+/* Additional styles for SignUp functionality */
+
+.checkboxGroup {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+.checkboxGroup input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: #FF8C00;
+    /* Orange to match branding */
+}
+
+.checkboxGroup label {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.pinkLink {
+    color: #FF69B4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.pinkLink:hover {
+    text-decoration: underline;
+}
+
+/* Ensure consistent spacing for the slightly longer Sign Up form */
+.authCard {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Custom Scrollbar for the Auth Card (if needed on smaller screens) */
+.authCard::-webkit-scrollbar {
+    width: 6px;
+}
+
+.authCard::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}

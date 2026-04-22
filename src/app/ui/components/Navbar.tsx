@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
             </Link>
 
             <div className="navLinks">
-                <Link to="/explore" className="link">Explore Polls</Link>
+                <Link to="/explore-polls" className="link">Explore Polls</Link>
                 <Link to="/trending" className="link">Trending</Link>
                 <Link to="/how-it-works" className="link">How it Works</Link>
                 <Link to="/verified" className="link">Verified Results</Link>

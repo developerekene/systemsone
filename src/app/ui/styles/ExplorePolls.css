@@ -1,0 +1,254 @@
+.explorePage {
+    padding-top: 80px;
+    /* Space for fixed navbar */
+    min-height: 100vh;
+    background-color: #fcfcfd;
+}
+
+.exploreHeader {
+    background: #003366;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.exploreTitle {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -0.04em;
+}
+
+.exploreSubtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+}
+
+.exploreSearch {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.exploreSearch input {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 8px;
+}
+
+.searchBtn {
+    background: #FF8C00;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Layout */
+.exploreLayout {
+    max-width: 1300px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 3rem;
+}
+
+/* Sidebar */
+.exploreSidebar h3 {
+    color: #003366;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.categoryList {
+    list-style: none;
+    padding: 0;
+}
+
+.categoryList li {
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #64748b;
+    transition: all 0.2s;
+    margin-bottom: 5px;
+}
+
+.categoryList li:hover {
+    background: rgba(0, 51, 102, 0.05);
+    color: #003366;
+}
+
+.categoryList li.activeCat {
+    background: #FF69B4;
+    color: white;
+}
+
+/* Grid Area */
+.gridHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: #64748b;
+}
+
+.sortDropdown {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    outline: none;
+    color: #003366;
+    font-weight: 600;
+}
+
+.pollsDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Poll Card */
+.explorePollCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 51, 102, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.explorePollCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.05);
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.statusTag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+}
+
+.statusTag.live {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+.statusTag.closed {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.pulse {
+    width: 6px;
+    height: 6px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+.categoryLabel {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.pollQuestionText {
+    font-size: 1.25rem;
+    color: #003366;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.cardBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.25rem;
+}
+
+.statItem {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.pollVoteBtn {
+    background: transparent;
+    border: 2px solid #003366;
+    color: #003366;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pollVoteBtn:hover {
+    background: #003366;
+    color: white;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .exploreLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .exploreSidebar {
+        display: none;
+    }
+
+    /* On mobile we usually use a filter toggle or horizontal list */
+    .exploreTitle {
+        font-size: 2.5rem;
+    }
+
+    .pollsDisplay {
+        grid-template-columns: 1fr;
+    }
+}

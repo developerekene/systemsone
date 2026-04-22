@@ -1,0 +1,225 @@
+.createPollPage {
+    padding: 10rem 2rem 6rem;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.createContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.createHeader {
+    margin-bottom: 4rem;
+}
+
+.stepIndicator {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #FF69B4;
+    /* Pink */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.createHeader h1 {
+    font-size: 3rem;
+    color: #003366;
+    /* Dark Blue */
+    font-weight: 900;
+    margin: 0.5rem 0;
+    letter-spacing: -0.04em;
+}
+
+.createHeader p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* Layout Grid */
+.createGrid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Form Styles */
+.formSection {
+    background: white;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 51, 102, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.02);
+}
+
+.inputBlock {
+    margin-bottom: 2.5rem;
+}
+
+.inputBlock label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.inputBlock textarea,
+.optionInputRow input {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.inputBlock textarea:focus,
+.optionInputRow input:focus {
+    border-color: #FF8C00;
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.1);
+}
+
+.optionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.optionInputRow {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.removeBtn {
+    background: #fff1f2;
+    border: none;
+    color: #e11d48;
+    width: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.addOptionLink {
+    background: none;
+    border: none;
+    color: #FF69B4;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* Settings Column */
+.settingsCard {
+    background: #003366;
+    color: white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.settingsCard h3 {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.settingRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settingRow:last-child {
+    border: none;
+}
+
+.settingTitle {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.settingDesc {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-top: 0.2rem;
+}
+
+.changeBtn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.dateInput {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.4rem;
+    border-radius: 6px;
+}
+
+/* Launch Box */
+.launchBox {
+    text-align: center;
+}
+
+.launchBtn {
+    width: 100%;
+    background: #FF8C00;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    transition: all 0.2s;
+}
+
+.launchBtn span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+.launchBtn:hover {
+    transform: translateY(-3px);
+    background: #ff991a;
+}
+
+.launchNotice {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 1rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .createGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .createHeader h1 {
+        font-size: 2.2rem;
+    }
+
+    .formSection {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,177 @@
+.trendingPage {
+    padding: 8rem 2rem 6rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.trendingHeader {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.liveBadge {
+    color: #FF69B4;
+    /* Pink */
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.trendingHeader h1 {
+    font-size: 3.5rem;
+    color: #003366;
+    /* Dark Blue */
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+}
+
+.trendingHeader p {
+    color: #64748b;
+    font-size: 1.2rem;
+}
+
+/* List Layout */
+.trendingList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trendingItem {
+    background: white;
+    border: 1px solid rgba(0, 51, 102, 0.08);
+    border-radius: 1.5rem;
+    padding: 1.5rem 2.5rem;
+    display: grid;
+    grid-template-columns: 80px 1fr 200px;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trendingItem:hover {
+    transform: translateX(10px);
+    border-color: #FF69B4;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.05);
+}
+
+/* Rank Styling */
+.rankNumber {
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(0, 51, 102, 0.1);
+    transition: color 0.3s ease;
+}
+
+.trendingItem:hover .rankNumber {
+    color: #FF69B4;
+}
+
+/* Content Styling */
+.itemMeta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.catTag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #003366;
+    background: #f1f5f9;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+}
+
+.velocityText {
+    color: #10b981;
+    /* Success Green for velocity */
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.itemQuestion {
+    font-size: 1.3rem;
+    color: #003366;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Stats/Button Styling */
+.statsCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.statGroup {
+    text-align: right;
+}
+
+.statLabel {
+    display: block;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.statValue {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #003366;
+}
+
+.quickVoteBtn {
+    background: #FF8C00;
+    /* Orange */
+    color: white;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.quickVoteBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Tablet & Mobile */
+@media (max-width: 900px) {
+    .trendingItem {
+        grid-template-columns: 50px 1fr;
+        padding: 1.5rem;
+    }
+
+    .statsCol {
+        grid-column: span 2;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #f1f5f9;
+    }
+
+    .statGroup {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    .trendingHeader h1 {
+        font-size: 2.5rem;
+    }
+}

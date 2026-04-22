@@ -1,0 +1,188 @@
+.verifiedPage {
+    padding: 10rem 2rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.verifiedHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.statusBadge {
+    display: inline-block;
+    background: #f0fdf4;
+    color: #16a34a;
+    /* Success Green */
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    border: 1px solid #dcfce7;
+}
+
+.verifiedHeader h1 {
+    font-size: 3.5rem;
+    color: #003366;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+}
+
+.verifiedHeader p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* Stats Summary Row */
+.statsSummary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.summaryCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 51, 102, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.summaryCard .label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.summaryCard .value {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #003366;
+}
+
+.highlightGreen {
+    color: #16a34a !important;
+}
+
+/* Table Styling */
+.resultsTableContainer {
+    background: white;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(0, 51, 102, 0.1);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.03);
+}
+
+.resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.resultsTable th {
+    background: #f8fafc;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #003366;
+    text-transform: uppercase;
+}
+
+.resultsTable td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+    color: #475569;
+}
+
+.pollId {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.pollTitle {
+    font-weight: 700;
+    color: #003366;
+}
+
+.pollDate {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #94a3b8;
+    margin-top: 0.25rem;
+}
+
+.integrityValue {
+    font-weight: 800;
+    color: #16a34a;
+}
+
+.statusPill {
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.statusPill.finalized {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.statusPill.audited {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.reportBtn {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #003366;
+}
+
+.reportBtn:hover {
+    background: #003366;
+    color: white;
+    border-color: #003366;
+}
+
+@media (max-width: 900px) {
+    .statsSummary {
+        grid-template-columns: 1fr;
+    }
+
+    .resultsTable thead {
+        display: none;
+    }
+
+    .resultsTable td {
+        display: block;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .resultsTable td:first-child {
+        padding-top: 1.5rem;
+    }
+
+    .resultsTable td:last-child {
+        padding-bottom: 1.5rem;
+        border-bottom: 4px solid #f1f5f9;
+    }
+}

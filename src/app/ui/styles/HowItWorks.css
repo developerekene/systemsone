@@ -1,0 +1,201 @@
+.howItWorksPage {
+    padding-top: 100px;
+    /* Account for fixed navbar */
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+.howHero {
+    text-align: center;
+    padding: 6rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.howBadge {
+    background: rgba(255, 105, 180, 0.1);
+    color: #FF69B4;
+    /* Pink */
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.howHero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #003366;
+    /* Dark Blue */
+    margin: 1.5rem 0;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.orangeText {
+    color: #FF8C00;
+}
+
+.howHero p {
+    font-size: 1.25rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Timeline Steps */
+.stepsContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.stepRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.stepNumber {
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(0, 51, 102, 0.05);
+    /* Very light dark blue */
+    line-height: 1;
+    flex-shrink: 0;
+    width: 120px;
+}
+
+.stepCard {
+    background: #f8fafc;
+    padding: 3rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 51, 102, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stepCard:hover {
+    transform: translateX(10px);
+    border-color: #FF69B4;
+}
+
+.stepIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stepCard h3 {
+    font-size: 1.75rem;
+    color: #003366;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.stepCard p {
+    color: #4b5563;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Integrity Section */
+.integritySection {
+    background: #003366;
+    color: white;
+    padding: 8rem 2rem;
+    margin: 6rem 0;
+    text-align: center;
+}
+
+.integrityContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.integrityContent h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+.integrityContent p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.integrityBadgeGrid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.iBadge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* CTA Section */
+.howFooterCta {
+    padding: 8rem 2rem;
+    text-align: center;
+}
+
+.howFooterCta h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.getStartedBtn {
+    background: #FF8C00;
+    color: white;
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0px #cc7000;
+    transition: all 0.2s;
+}
+
+.getStartedBtn:hover {
+    transform: translateY(-2px);
+    background: #ff991a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .howHero h1 {
+        font-size: 2.8rem;
+    }
+
+    .stepRow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .stepNumber {
+        font-size: 3rem;
+        width: auto;
+    }
+
+    .stepCard {
+        padding: 2rem;
+    }
+
+    .integrityContent h2 {
+        font-size: 2.2rem;
+    }
+}

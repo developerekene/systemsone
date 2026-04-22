@@ -1,0 +1,160 @@
+.startPage {
+    padding: 10rem 2rem 6rem;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.startContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.startHeader {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.startHeader h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #003366;
+    /* Dark Blue */
+    letter-spacing: -0.05em;
+    margin-bottom: 1rem;
+}
+
+.pinkText {
+    color: #FF69B4;
+}
+
+.startHeader p {
+    color: #64748b;
+    font-size: 1.2rem;
+}
+
+/* Bento Grid Styling */
+.bentoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 220px);
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.bentoCard {
+    padding: 2.5rem;
+    border-radius: 2rem;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 51, 102, 0.05);
+}
+
+.bentoCard.blue {
+    background: #f8fafc;
+    color: #003366;
+}
+
+.bentoCard.pink {
+    background: #fff1f2;
+    color: #be123c;
+}
+
+.bentoCard.orange {
+    background: #fff7ed;
+    color: #9a3412;
+}
+
+.bentoCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.08);
+}
+
+.cardIcon {
+    font-size: 2.5rem;
+}
+
+.cardContent h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.cardContent p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+.cardArrow {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.2rem;
+    opacity: 0.3;
+}
+
+/* Quick Actions / Drafts */
+.quickActions h2 {
+    font-size: 1.25rem;
+    color: #003366;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.draftItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: white;
+    border-radius: 1.25rem;
+    border: 1px solid #e2e8f0;
+}
+
+.draftName {
+    display: block;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.25rem;
+}
+
+.draftDate {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.resumeBtn {
+    background: #FF8C00;
+    /* Orange */
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.resumeBtn:hover {
+    background: #e67e00;
+}
+
+/* Tablet / Mobile */
+@media (max-width: 768px) {
+    .bentoGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .startHeader h1 {
+        font-size: 2.5rem;
+    }
+
+    .bentoCard {
+        padding: 2rem;
+    }
+}
