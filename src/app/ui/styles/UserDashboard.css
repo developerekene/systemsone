@@ -1,0 +1,177 @@
+.dashboardPage {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+.dashboardHero {
+    background: #003366; /* Dark Blue */
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.heroTop {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userWelcome h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.pinkText { color: #FF69B4; }
+
+/* Trust Score Widget */
+.trustMetric {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    width: 200px;
+}
+
+.metricLabel { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; opacity: 0.7; }
+.metricValue { display: block; font-size: 2rem; font-weight: 900; margin: 0.25rem 0; }
+.metricBar { height: 6px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; }
+.metricBar .fill { height: 100%; background: #FF8C00; } /* Orange fill */
+
+/* Layout */
+.dashboardLayout {
+    max-width: 1300px;
+    margin: -3rem auto 4rem;
+    padding: 0 2rem;
+}
+
+/* Stats Row */
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.statCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid rgba(0, 51, 102, 0.05);
+}
+
+.statIcon { font-size: 2rem; }
+.statNum { font-size: 1.75rem; font-weight: 900; color: #003366; }
+.statCard p { color: #64748b; font-weight: 600; margin: 0; }
+
+/* Grid Main Area */
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 { color: #003366; font-weight: 800; }
+
+.createActionBtn {
+    background: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* My Polls List */
+.myPollsList { display: flex; flex-direction: column; gap: 1rem; }
+
+.miniPollCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f1f5f9;
+}
+
+.pollInfo { display: flex; align-items: center; gap: 12px; }
+.statusDot { width: 10px; height: 10px; border-radius: 50%; }
+.statusDot.live { background: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+.statusDot.closed { background: #94a3b8; }
+
+.miniPollCard h3 { font-size: 1rem; color: #003366; font-weight: 700; margin: 0; }
+
+.pollMeta { display: flex; align-items: center; gap: 2rem; font-size: 0.85rem; color: #64748b; }
+.trendText { color: #10b981; font-weight: 700; }
+
+.manageBtn {
+    background: #f1f5f9;
+    border: none;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #003366;
+    cursor: pointer;
+}
+
+/* Sidebar Feed */
+.dashboardSidebar h3 { font-size: 1rem; color: #003366; margin-bottom: 1.5rem; }
+
+.activityTimeline {
+    border-left: 2px solid #e2e8f0;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.activityItem { margin-bottom: 1.5rem; position: relative; }
+.activityItem::before {
+    content: ''; position: absolute; left: -1.95rem; top: 5px;
+    width: 10px; height: 10px; background: #FF69B4; border-radius: 50%;
+}
+
+.activityItem p { margin: 0; font-size: 0.9rem; color: #475569; }
+.activityItem span { font-size: 0.75rem; color: #94a3b8; }
+
+.promoBox {
+    background: #003366;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-image: linear-gradient(45deg, #003366, #004080);
+}
+
+.promoBox h4 { margin: 0 0 0.5rem; color: #FF8C00; }
+.promoBox p { font-size: 0.8rem; opacity: 0.8; line-height: 1.5; }
+
+.verifySmallBtn {
+    width: 100%;
+    background: white;
+    color: #003366;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .dashboardGrid { grid-template-columns: 1fr; }
+    .statsRow { grid-template-columns: 1fr; }
+    .heroTop { flex-direction: column; text-align: center; gap: 2rem; }
+}

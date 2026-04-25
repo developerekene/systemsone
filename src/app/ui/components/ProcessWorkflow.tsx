@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 const ProcessWorkflow: React.FC = () => {
     return (
         <>
-            
+
             <section className="workflowContainer">
                 {/* Row 1: The Creation Process */}
                 <div className="workflowRow">
@@ -52,7 +52,7 @@ const ProcessWorkflow: React.FC = () => {
                             belongs to a unique, real user. View your data in crystal-clear
                             interactive charts and export them for official reporting.
                         </p>
-                        <a href="#" className="workflowLink">
+                        <a href="/verification-Logic" className="workflowLink">
                             How we verify votes
                         </a>
                     </div>

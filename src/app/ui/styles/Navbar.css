@@ -21,10 +21,13 @@
     letter-spacing: -0.06em;
     color: #003366;
     text-decoration: none;
-    z-index: 3000; /* Keep logo above mobile menu */
+    z-index: 3000;
+    /* Keep logo above mobile menu */
 }
 
-.logoAccent { color: #FF69B4; }
+.logoAccent {
+    color: #FF69B4;
+}
 
 .navContainer {
     display: flex;
@@ -48,7 +51,9 @@
     transition: color 0.2s ease;
 }
 
-.link:hover { color: #FF69B4; }
+.link:hover {
+    color: #FF69B4;
+}
 
 .actions {
     display: flex;
@@ -82,7 +87,8 @@
 /* --- MOBILE STYLES --- */
 
 .menuToggle {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
     background: none;
     border: none;
     cursor: pointer;
@@ -98,7 +104,8 @@
     transition: all 0.3s ease;
 }
 
-.hamburger::before, .hamburger::after {
+.hamburger::before,
+.hamburger::after {
     content: '';
     position: absolute;
     width: 24px;
@@ -107,17 +114,163 @@
     transition: all 0.3s ease;
 }
 
-.hamburger::before { transform: translateY(-8px); }
-.hamburger::after { transform: translateY(8px); }
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
 
 /* Hamburger Open State (X) */
-.hamburger.open { background: transparent; }
-.hamburger.open::before { transform: rotate(45deg); }
-.hamburger.open::after { transform: rotate(-45deg); }
+.hamburger.open {
+    background: transparent;
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg);
+}
+
+.profileWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* The Circle Icon */
+.profileIconBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.profileIconBtn:hover {
+    transform: scale(1.05);
+}
+
+.profileIcon {
+    width: 40px;
+    height: 40px;
+    background: #003366;
+    /* Dark Blue */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.profileIconBtn:focus .profileIcon {
+    border-color: #191818;
+    /* Pink border when active */
+}
+
+/* Dropdown Menu Positioning */
+.profileDropdown {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    width: 220px;
+    background: white;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(0, 51, 102, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 51, 102, 0.12);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 5000;
+    animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownHeader {
+    padding: 0.75rem 1rem;
+}
+
+.userName {
+    font-weight: 800;
+    color: #003366;
+    margin: 0;
+}
+
+.userEmail {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.dropdownDivider {
+    border: none;
+    border-top: 1px solid #f1f5f9;
+    margin: 0.5rem 0;
+}
+
+.menuItem {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #475569;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.2s;
+}
+
+.menuItem:hover {
+    background: #f8fafc;
+    color: #FF69B4;
+    /* Pink on hover */
+}
+
+.signOutBtn {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ef4444;
+    /* Alert Red */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.signOutBtn:hover {
+    background: #fff1f2;
+}
 
 @media (max-width: 1024px) {
-    .navbar { padding: 1rem 2rem; }
-    
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
     .menuToggle {
         display: block;
     }
@@ -125,7 +278,8 @@
     .navContainer {
         position: fixed;
         top: 0;
-        right: -100%; /* Hidden by default */
+        right: -100%;
+        /* Hidden by default */
         width: 80%;
         max-width: 400px;
         height: 100vh;
@@ -140,7 +294,8 @@
     }
 
     .navContainer.menuActive {
-        right: 0; /* Slide in */
+        right: 0;
+        /* Slide in */
     }
 
     .navLinks {
@@ -150,7 +305,8 @@
     }
 
     .link {
-        font-size: 1.25rem; /* Larger links for touch */
+        font-size: 1.25rem;
+        /* Larger links for touch */
     }
 
     .actions {
@@ -166,6 +322,13 @@
 }
 
 @media (max-width: 480px) {
-    .navbar { padding: 1rem; }
-    .navContainer { width: 100%; } /* Full screen on phones */
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navContainer {
+        width: 100%;
+    }
+
+    /* Full screen on phones */
 }

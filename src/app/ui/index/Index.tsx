@@ -8,6 +8,7 @@ import SignIn from '../pages/Signin';
 import SignUp from '../pages/SignUp';
 import StartBuilding from '../pages/StartBuilding';
 import Trending from '../pages/Trending';
+import VerificationLogic from '../pages/VerificationLogic';
 import VerifiedResults from '../pages/VerifiedResults';
 
 const Index: React.FC = () => {
@@ -22,6 +23,7 @@ const Index: React.FC = () => {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/create-poll" element={<CreatePoll />} />
             <Route path="/start-building" element={<StartBuilding />} />
+            <Route path="/verification-Logic" element={<VerificationLogic />} />
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
     );
