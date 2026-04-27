@@ -118,6 +118,60 @@
     filter: brightness(1.1);
 }
 
+/* Container for the buttons */
+.cardActions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+/* Primary Vote Button (Keep your existing styles or use these) */
+.voteBtn {
+    flex: 2; /* Takes up more space */
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.voteBtn:hover {
+    background: #FF8C00; /* Turns Orange on hover */
+    transform: translateY(-2px);
+}
+
+/* Secondary View Button */
+.viewBtn {
+    flex: 1; /* Takes up less space */
+    background: #f1f5f9;
+    color: #003366;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.viewBtn:hover {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
+/* Responsive adjustment for small cards */
+@media (max-width: 480px) {
+    .cardActions {
+        flex-direction: column;
+    }
+    
+    .viewBtn, .voteBtn {
+        width: 100%;
+    }
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .pollsGrid {
