@@ -1,0 +1,247 @@
+.detailsPage {
+    padding-top: 0px;
+    background: #fcfcfd;
+    min-height: 100vh;
+}
+
+.detailsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 3rem;
+}
+
+/* Header Styles */
+.pollMainHeader h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    font-weight: 900;
+    margin: 1.5rem 0;
+    line-height: 1.2;
+}
+
+.descriptionText {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.authorBadge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatarSmall {
+    width: 32px;
+    height: 32px;
+    background: #FF69B4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+/* Results Section */
+.resultsSection {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    margin-bottom: 4rem;
+}
+
+.resultBarItem {
+    margin-bottom: 1.5rem;
+}
+
+.barLabel {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.barContainer {
+    height: 12px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background: #003366;
+    border-radius: 10px;
+    transition: width 1s ease-out;
+}
+
+.countLabel {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 4px;
+    display: block;
+}
+
+.voteActionBtn {
+    width: 100%;
+    background: #FF8C00;
+    color: white;
+    border: none;
+    padding: 1.25rem;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Sidebar Styles */
+.sidebarCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    margin-bottom: 1.5rem;
+}
+
+.auditCard {
+    background: #003366;
+    color: white;
+}
+
+.hashDisplay {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-size: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.infoItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.voterBadge {
+    background: #ecfdf5;
+    color: #10b981;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+/* Reputation Bar Styles */
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.authorNameRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reputationBarWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.reputationLabel {
+    font-size: 0.7rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.miniRepBar {
+    width: 60px;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.repFill {
+    height: 100%;
+    background: #FF8C00;
+}
+
+/* Status and Visibility Tags */
+.visibilityTag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #003366;
+}
+
+.statusLabel {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.statusLabel.live {
+    background: #ecfdf5;
+    color: #10b981;
+}
+
+.statusLabel.closed {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.statusLabel.audited {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+/* Blockchain Ref */
+.chainRef {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.avatarImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .detailsGrid {
+        grid-template-columns: 1fr;
+    }
+}

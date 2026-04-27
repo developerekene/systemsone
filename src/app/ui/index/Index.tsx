@@ -4,6 +4,7 @@ import ExplorePolls from '../pages/ExplorePolls';
 import HowItWorks from '../pages/HowItWorks';
 
 import LandingPage from '../pages/LandingPage';
+import PollDetails from '../pages/PollDetails';
 import SignIn from '../pages/Signin';
 import SignUp from '../pages/SignUp';
 import StartBuilding from '../pages/StartBuilding';
@@ -21,6 +22,7 @@ const Index: React.FC = () => {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/verified" element={<VerifiedResults />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/poll-details/:id" element={<PollDetails />} />
             <Route path="/create-poll" element={<CreatePoll />} />
             <Route path="/start-building" element={<StartBuilding />} />
             <Route path="/verification-Logic" element={<VerificationLogic />} />

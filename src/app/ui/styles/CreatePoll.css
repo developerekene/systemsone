@@ -210,6 +210,37 @@
     line-height: 1.4;
 }
 
+.selectInput {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    font-family: inherit;
+    font-weight: 600;
+    color: #003366;
+}
+
+.orangeText {
+    color: #FF8C00;
+}
+
+.inputBlock label {
+    display: block;
+    font-weight: 800;
+    color: #003366;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.dateInput {
+    border: 1px solid #e2e8f0;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
 @media (max-width: 900px) {
     .createGrid {
         grid-template-columns: 1fr;

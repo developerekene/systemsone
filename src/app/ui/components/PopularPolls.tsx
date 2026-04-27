@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DETAILED_POLLS } from "../../utils/data/Data";
 import "../styles/PopularPolls.css";
 
@@ -30,18 +30,19 @@ const PopularPolls: React.FC = () => {
 
             {/* Action Container for Two Buttons */}
             <div className="cardActions">
-              <button
+              <Link
+                to={`/poll-details/${poll.id}`}
                 className="viewBtn"
-                onClick={() => navigate(`/poll/${poll.id}`)}
+                style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
               >
                 View Poll
-              </button>
-              <button
+              </Link>
+              {/* <button
                 className="voteBtn"
                 onClick={() => navigate(`/vote/${poll.id}`)}
               >
                 Cast Your Vote
-              </button>
+              </button> */}
             </div>
           </div>
         ))}

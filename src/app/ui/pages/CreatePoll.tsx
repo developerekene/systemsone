@@ -2,13 +2,35 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/CreatePoll.css";
 
-const CreatePoll: React.FC = () => {
-    const [options, setOptions] = useState(["", ""]);
 
-    const addOption = () => setOptions([...options, ""]);
+const CreatePoll: React.FC = () => {
+    // Basic Form State
+    const [question, setQuestion] = useState("");
+    const [description, setDescription] = useState("");
+    const [category, setCategory] = useState("Technology");
+    const [visibility, setVisibility] = useState("Public");
+    const [tags, setTags] = useState("");
+    const [endDate, setEndDate] = useState("");
+    
+    // Options State (Structured to match VoteOption interface)
+    const [options, setOptions] = useState([
+        { id: "1", text: "", count: 0 },
+        { id: "2", text: "", count: 0 }
+    ]);
+
+    const addOption = () => {
+        const newId = (options.length + 1).toString();
+        setOptions([...options, { id: newId, text: "", count: 0 }]);
+    };
+
+    const handleOptionChange = (index: number, value: string) => {
+        const updatedOptions = [...options];
+        updatedOptions[index].text = value;
+        setOptions(updatedOptions);
+    };
+
     const removeOption = (index: number) => {
-        const newOptions = options.filter((_, i) => i !== index);
-        setOptions(newOptions);
+        setOptions(options.filter((_, i) => i !== index));
     };
 
     return (
@@ -18,8 +40,8 @@ const CreatePoll: React.FC = () => {
                 <div className="createContainer">
                     <header className="createHeader">
                         <span className="stepIndicator">Step 1 of 3: Configuration</span>
-                        <h1>Launch a New Poll</h1>
-                        <p>Define your question, set your rules, and invite your community.</p>
+                        <h1>Launch a New <span className="orangeText">Poll</span></h1>
+                        <p>Define your question, set your rules, and anchor your decision to the system ledger.</p>
                     </header>
 
                     <div className="createGrid">
@@ -28,8 +50,20 @@ const CreatePoll: React.FC = () => {
                             <div className="inputBlock">
                                 <label>Poll Question</label>
                                 <textarea
+                                    value={question}
+                                    onChange={(e) => setQuestion(e.target.value)}
                                     placeholder="e.g., Should we implement a 4-day work week?"
-                                    rows={3}
+                                    rows={2}
+                                />
+                            </div>
+
+                            <div className="inputBlock">
+                                <label>Description & Context</label>
+                                <textarea
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    placeholder="Provide the background info and research for this proposal..."
+                                    rows={4}
                                 />
                             </div>
 
@@ -40,6 +74,8 @@ const CreatePoll: React.FC = () => {
                                         <div key={index} className="optionInputRow">
                                             <input
                                                 type="text"
+                                                value={opt.text}
+                                                onChange={(e) => handleOptionChange(index, e.target.value)}
                                                 placeholder={`Option ${index + 1}`}
                                             />
                                             {options.length > 2 && (
@@ -55,6 +91,16 @@ const CreatePoll: React.FC = () => {
                                     + Add another option
                                 </button>
                             </div>
+
+                            <div className="inputBlock">
+                                <label>Tags (Comma separated)</label>
+                                <input 
+                                    type="text" 
+                                    placeholder="e.g. Economy, AI, Future" 
+                                    value={tags}
+                                    onChange={(e) => setTags(e.target.value)}
+                                />
+                            </div>
                         </div>
 
                         {/* Right Column: Settings & Meta */}
@@ -64,36 +110,60 @@ const CreatePoll: React.FC = () => {
 
                                 <div className="settingRow">
                                     <div>
-                                        <span className="settingTitle">Voting Method</span>
-                                        <p className="settingDesc">Simple Majority (1 vote per person)</p>
+                                        <span className="settingTitle">Category</span>
+                                        <p className="settingDesc">Group your poll for discovery</p>
                                     </div>
-                                    <button className="changeBtn">Change</button>
+                                    <select 
+                                        className="selectInput"
+                                        value={category}
+                                        onChange={(e) => setCategory(e.target.value)}
+                                    >
+                                        <option>Technology</option>
+                                        <option>Politics</option>
+                                        <option>Economics</option>
+                                        <option>Environment</option>
+                                        <option>Society</option>
+                                        <option>Infrastructure</option>
+                                    </select>
                                 </div>
 
                                 <div className="settingRow">
                                     <div>
                                         <span className="settingTitle">End Date</span>
-                                        <p className="settingDesc">7 Days from now</p>
+                                        <p className="settingDesc">When voting concludes</p>
                                     </div>
-                                    <input type="date" className="dateInput" />
+                                    <input 
+                                        type="date" 
+                                        className="dateInput" 
+                                        value={endDate}
+                                        onChange={(e) => setEndDate(e.target.value)}
+                                    />
                                 </div>
 
                                 <div className="settingRow">
                                     <div>
-                                        <span className="settingTitle">Privacy</span>
-                                        <p className="settingDesc">Public (Indexed by Google)</p>
+                                        <span className="settingTitle">Visibility</span>
+                                        <p className="settingDesc">{visibility} (Who can see this?)</p>
                                     </div>
-                                    <div className="toggle"></div>
+                                    <select 
+                                        className="selectInput"
+                                        value={visibility}
+                                        onChange={(e) => setVisibility(e.target.value)}
+                                    >
+                                        <option>Public</option>
+                                        <option>Private</option>
+                                        <option>Restricted</option>
+                                    </select>
                                 </div>
                             </div>
 
                             <div className="launchBox">
                                 <button className="launchBtn">
-                                    Launch Poll
-                                    <span>Free for communities</span>
+                                    Generate Integrity Hash & Launch
+                                    <span>Verified by SystemsOne Ledger</span>
                                 </button>
                                 <p className="launchNotice">
-                                    By launching, you agree to the SystemsOne Integrity Guidelines.
+                                    Your poll will be assigned a SHA-256 identifier upon launch.
                                 </p>
                             </div>
                         </div>
